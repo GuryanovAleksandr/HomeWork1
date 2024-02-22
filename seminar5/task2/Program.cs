@@ -1,5 +1,6 @@
-﻿
-int[,] CreateMatrix(int rows, int cols) //метод создания массива случайных чисел от 0 до 100
+﻿// Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
+
+int[,] CreateMatrix(int rows, int cols) //метод создания двумерного массива случайных чисел от 0 до 100
 {
     int[,] matr = new int[rows, cols]; // [стр, столбцы]
     Random rnd = new Random();
@@ -13,7 +14,7 @@ int[,] CreateMatrix(int rows, int cols) //метод создания масси
     return matr;
 }
 
-void PrintMatrix(int[,] matr)
+void PrintMatrix(int[,] matr) //метод вызова этого массива
 {
     for (int i = 0; i < matr.GetLength(0); i++) // стр
     {
@@ -37,7 +38,7 @@ void PrintArray(int[,] array) //метод вызова нового масси�
     }
 }
 
-int[,] SwapFirstLastRows(int[,] array)
+int[,] SwapFirstLastRows(int[,] array) // метод обмена первой с последней строкой
 {
     for(int i = 0; i < array.GetLength(1); i++)
     {
@@ -46,7 +47,7 @@ int[,] SwapFirstLastRows(int[,] array)
     return array;
 }
 
-void SwapItems(int[,] array, int i)
+void SwapItems(int[,] array, int i) //метод обмена элементами массива
 {
     int temp = array[0, i];
     array[0, i] = array[array.GetLength(0) - 1, i];
